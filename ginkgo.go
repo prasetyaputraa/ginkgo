@@ -6,12 +6,12 @@ import (
 )
 
 type Providers struct {
-	applications func(conf conf.Configuration)
+	Applications func(conf conf.Configuration)
 }
 
 // get all the providers
 func GetProviders() Providers {
 	return Providers{
-		applications: providerApplications.Provide,
+		Applications: providerApplications.Provide,
 	}
 }
